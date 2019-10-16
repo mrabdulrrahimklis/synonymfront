@@ -1,0 +1,105 @@
+<div class="text-center">
+  <h1>{{ title }}</h1>
+</div>
+<div>
+  <div>
+    <div class="search-synonyms">
+      <input
+        type="text"
+        name="search"
+        [(ngModel)]="searchText"
+        autocomplete="off"
+        placeholder="Search..."
+      />
+      <button class="add-syonym-button" (click)="addNewCollection()">
+        Add New Synonym Collection
+      </button>
+    </div>
+    <table class="table" id="table">
+      <thead>
+        <tr class="top-of-table">
+          <th>Number</th>
+          <th>Synonyms</th>
+          <th class="center">Action</th>
+        </tr>
+      </thead>
+      <tbody class="body-of-table">
+        <tr
+          *ngFor="
+            let word of this.store.value.synonyms.data | filter: searchText;
+            index as i
+          "
+        >
+          <td class="center-text">{{ i + 1 }}</td>
+          <td>{{ word.payload }}</td>
+          <td class="center">
+            <button (click)="addNewWord(word.name)">Add</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="open" id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="open = !open">&times;</span>
+    <div>
+      <div class="input-under-label">
+        <label for="inputname">Name</label>
+        <input
+          [(ngModel)]="inputName"
+          name="input"
+          id="inputname"
+          type="text"
+        />
+      </div>
+      <div class="input-under-label">
+        <label for="inputSynonyms">Synonyms</label>
+        <input
+          [(ngModel)]="inputArrays"
+          class="inputArray"
+          id="inputSynonyms"
+          type="text"
+        />
+        <label class="hint">Separate all your inputs with ' , ' please</label>
+      </div>
+      <div>
+        <button
+          (click)="submitNewCollection()"
+          [disabled]="!inputArrays || !inputName"
+          class="submitButton"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="second" id="mySecondModal" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="second = !second">&times;</span>
+    <div>
+      <div class="input-under-label">
+        <label for="inputSecondSynonyms">Synonyms</label>
+        <input
+          [(ngModel)]="inputWords"
+          class="inputArray"
+          id="inputSecondSynonyms"
+          type="text"
+        />
+        <label class="hint">Separate all your inputs with ' , ' please</label>
+      </div>
+      <div>
+        <button
+          (click)="submitNewWord()"
+          [disabled]="!inputWords"
+          class="submitButton"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

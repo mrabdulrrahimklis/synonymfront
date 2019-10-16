@@ -1,0 +1,99 @@
+.text-center h1 {
+  text-align: center;
+}
+.search-synonyms {
+  margin: 0 auto;
+  display: block;
+  width: 60vw;
+}
+.search-synonyms input {
+  border-radius: 2px;
+  height: 18px;
+  border: 1px solid gray;
+  padding: 0 5px;
+}
+.add-syonym-button {
+  float: right;
+}
+.table {
+  width: 60vw;
+  margin: 0 auto;
+}
+.top-of-table th {
+  text-align: left;
+  background-color: #1876d2;
+  color: white;
+}
+.body-of-table tr:nth-child(even) {
+  background-color: #d3d7da;
+}
+.body-of-table tr:nth-child(odd) {
+  background-color: white;
+}
+.center {
+  text-align: center;
+}
+.input-under-label input,
+.input-under-label label {
+  display: block;
+}
+.inputArray {
+  width: 100%;
+}
+.hint {
+  font-size: 8px;
+}
+.submitButton {
+  background-color: #1975d2;
+  color: white;
+  border: 0;
+  border: 1px solid #1975d2;
+  padding: 3px 5px;
+  margin-top: 10px;
+}
+/* The Modal (background) */
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.center-text{
+  text-align: center;
+}
+.submitButton:disabled,
+.submitButton[disabled] {
+  background-color: white;
+  color: gray;
+  border: 1px solid white;
+}

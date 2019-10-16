@@ -1,0 +1,16 @@
+{
+  "synonyms": [
+    {
+      "name": "clear",
+      "synonyms": ["clear", "wash", "washing", "clearing"]
+    },
+    {
+      "name": "color",
+      "synonyms": ["colors", "red"]
+    },
+    {
+      "name": "",
+      "synonyms": ["second", "back", "endorse", "indorse"]
+    }
+  ]
+}
